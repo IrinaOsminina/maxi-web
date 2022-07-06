@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+<a href="/">На Главную</a>
+<form id="sum" action="/getSum" method="post">
+<h1>Общая сумма покупок за {{date}}</h1>
+<label for="date">Введите дату: </label>
+<input type="date" id="date" name="date" value="{{date}}"/>
+<button type="submit">Обовить</button>
+</br>
+<label>Общая сумма покупок: {{totalSum}}</label>
+</form>
+</body>
+</html>

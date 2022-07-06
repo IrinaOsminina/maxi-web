@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<body>
+<a href="/">На Главную</a>
+<form id="sum" action="/getTopProduct" method="post">
+<h1>Топ 3 товаров</h1>
+<label for="kppNumber">Введите номер КПП: </label>
+<input type="number" id="kppNumber" name="kppNumber"  value="{{kppNumber}}"/>
+<button type="submit">Обовить</button>
+</br>
+{{#products.0}}
+<table border="1">
+<tr>
+    <th>Наименование</th>
+    <th>Артикул</th>
+    <th>Количество</th>
+</tr>
+{{# products }}
+   <tr>
+       <td>{{ name }}</td>
+       <td>{{productCode}}</td>
+       <td>{{count}}</td
+   </tr>
+{{/ products }}
+</table>
+{{/products.0}}
+{{^products.0}}Нет товаров{{/products.0}}
+
+</form>
+</body>
+
+</html>
